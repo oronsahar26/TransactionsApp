@@ -7,7 +7,7 @@ import Brief from './components/Brief.tsx'
 import ExpCategories from './components/ExpCategories.tsx'
 import type { Transaction } from './types/Transaction.ts'
 import transactions from './data/script.ts'
-import {AppContext} from './components/AppContext.jsx'
+import {AppContext} from './components/AppContext.tsx'
 
 
 

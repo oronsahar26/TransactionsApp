@@ -1,11 +1,10 @@
-import { createContext } from 'react';
-import type { Transaction } from '../types/Transaction';
+import { createContext, Dispatch, SetStateAction } from 'react';
+import type { Transaction } from '../types/Transaction'; // ודא שהנתיב נכון
 
-// הגדרת המבנה של ה-Context
 interface AppContextType {
   transactionList: Transaction[];
-  setTransactionList: React.Dispatch<React.SetStateAction<Transaction[]>>;
+  setTransactionList: Dispatch<SetStateAction<Transaction[]>>;
 }
 
-// הוספת הטיפוס בזמן היצירה
+// אנחנו מגדירים את ה-Context עם הטיפוס הנכון, ונותנים undefined כערך התחלתי
 export const AppContext = createContext<AppContextType | undefined>(undefined);
