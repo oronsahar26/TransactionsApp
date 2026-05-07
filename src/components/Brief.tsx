@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {AppContext} from './AppContext.jsx'
+import {AppContext} from './AppContext'
 import { useContext } from 'react'
 import type { Transaction } from './types/Transaction.ts'
 

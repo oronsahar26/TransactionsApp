@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {AppContext} from './AppContext.jsx'
+import {AppContext} from './AppContext'
 import { useContext } from 'react'
 import type { Transaction } from './types/Transaction.ts'
 
@@ -15,7 +15,7 @@ function TransList() {
 
   function DeleteTransaction(id : number) : void {
 
-    setTransactionList(transactionList.filter((item)=>(item.id !=id )))
+    setTransactionList(transactionList.filter((item : Transaction)=>(item.id !=id )))
 
 
   }
@@ -28,7 +28,7 @@ function TransList() {
     setEditState(true);
     let newDescription = prompt('Insert New Description');
 
-    setTransactionList(transactionList.map((item)=>{
+    setTransactionList(transactionList.map((item: Transaction)=>{
       if (item.id === id){
         item.description = newDescription;
       }
@@ -49,7 +49,7 @@ function TransList() {
         
             <h2>Transactions</h2>
 
-            {transactionList.map(item => (
+            {transactionList.map((item : Transaction )=> (
 
               <div className={`w-full p-3 flex justify-between ${item.type === 'income' ? 'bg-green-200' : 'bg-red-200'}`}>  
                 <div>

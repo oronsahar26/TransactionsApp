@@ -1,5 +1,5 @@
 
-import {AppContext} from './AppContext.jsx'
+import {AppContext} from './AppContext'
 import { useContext, useState } from 'react'
 
 function Add() {

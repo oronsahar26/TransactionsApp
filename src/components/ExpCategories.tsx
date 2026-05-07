@@ -1,7 +1,7 @@
 import React from 'react'
-import { AppContext } from './AppContext.jsx'
+import { AppContext } from './AppContext'
 import { useContext, useState } from 'react'
-import type { Transaction } from '../types/Transaction.js';
+import type { Transaction } from '../types/Transaction';
 
 
 function ExpCategories() {
@@ -10,9 +10,9 @@ function ExpCategories() {
 
   const { transactionList } = useContext(AppContext);
 
-  let expenses: Transaction[] = transactionList.filter(item => (item.type == 'expense'));
+  let expenses: Transaction[] = transactionList.filter((item : Transaction) => (item.type == 'expense'));
 
-  let categoiesFull: string[] = expenses.map(item => (item.category));
+  let categoiesFull: string[] = expenses.map((item : Transaction) => (item.category));
 
   let distinctCategories: string[] = [...new Set(categoiesFull)];
 
@@ -29,7 +29,7 @@ function ExpCategories() {
 
       <h2 className='font-bold'>Expence Categories</h2>
 
-      {distinctCategories.map((category) =>
+      {distinctCategories.map((category : string) =>
       {          
         
           

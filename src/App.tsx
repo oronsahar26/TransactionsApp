@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Add from './components/Add.tsx'
-import TransList from './components/TransList.tsx'
-import Brief from './components/Brief.tsx'
-
-import ExpCategories from './components/ExpCategories.tsx'
-import type { Transaction } from './types/Transaction.ts'
-import transactions from './data/script.ts'
-import {AppContext} from './components/AppContext.tsx'
+import Add from './components/Add'
+import TransList from './components/TransList'
+import Brief from './components/Brief'
+import ExpCategories from './components/ExpCategories'
+import type { Transaction } from './types/Transaction'
+import transactions from './data/script'
+import { AppContext } from './components/AppContext'
+ 
 
 
 
