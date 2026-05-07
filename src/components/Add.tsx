@@ -61,7 +61,9 @@ function Add() {
 
       <div className='mb-2'>
           <h2>Category</h2>
-          <input type='text' className='border-2 border-gray-400 w-full mt-2 p-1' value = {transCategory} onChange={(e)=>setTransCategory(e.target.value)}/>
+          
+          <input type='text' className='border-2 border-gray-400 w-full mt-2 p-1' value = {transCategory} 
+          onChange={(e) => setTransType(e.target.value as 'expense' | 'income')}/>
       </div>
 
 

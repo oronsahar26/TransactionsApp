@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import {AppContext} from './AppContext'
 import { useContext } from 'react'
-import type { Transaction } from './types/Transaction.ts'
-
+import type { Transaction } from '../types/Transaction'
 
 function TransList() {
 
@@ -28,12 +27,20 @@ function TransList() {
     setEditState(true);
     let newDescription = prompt('Insert New Description');
 
-    setTransactionList(transactionList.map((item: Transaction)=>{
-      if (item.id === id){
-        item.description = newDescription;
-      }
-      return item;
-    }));
+    // setTransactionList(transactionList.map((item: Transaction)=>{
+    //   if (item.id === id){
+    //     item.description = newDescription;
+    //   }
+    //   return item;
+    // }));
+
+
+    setTransactionList(transactionList.map((item: Transaction) => {
+  if (item.id === id) {
+    return { ...item, description: newDescription || '' }; // יצירת אובייקט חדש
+  }
+  return item;
+}));
 
 
 

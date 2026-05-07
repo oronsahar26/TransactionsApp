@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
 import {AppContext} from './AppContext'
 import { useContext } from 'react'
-import type { Transaction } from './types/Transaction.ts'
+// import type { Transaction } from './types/Transaction'
 
 function Brief() {
 
-  const {transactionList, setTransactionList} = useContext(AppContext);
+  const {transactionList} = useContext(AppContext);
 
     
   let totalIncome: number = 0;

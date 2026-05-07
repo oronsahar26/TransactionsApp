@@ -6,7 +6,7 @@ interface AppContextType {
   setTransactionList: Dispatch<SetStateAction<Transaction[]>>;
 }
 
-// נותנים אובייקט ריק כ-initialValue ומבצעים casting לטיפוס הרצוי
+// מתן ערך ברירת מחדל ריק כדי למנוע שגיאות unknown
 export const AppContext = createContext<AppContextType>({
     transactionList: [],
     setTransactionList: () => {} 
